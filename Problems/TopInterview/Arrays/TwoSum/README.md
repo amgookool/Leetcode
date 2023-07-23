@@ -1,45 +1,45 @@
-# Remove Duplicates from Sorted Array
+# Two Sum
 
 ## Question
 
-Given an integer array ```nums``` sorted in **non-decreasing order**, remove the duplicates **_in-place_** such that each unique element appears only **once**.
-The **relative order** of the elements should be kept the **same**.
-Then return _the number of unique elements in_ ```nums```.
+Given an array of integers ```nums``` and an integer ```target```, return _indices of the two numbers such that they add up to_ ```target```.
 
-Consider the number of unique elements of ```nums``` to be ```k```, to get accepted, you need to do the following things:
+You may assume that each input would have exactly **one solution**, and _you may not use the same element twice_.
 
-- Change the array ```nums``` such that the first ```k``` elements of ```nums``` contain the unique elements in the order they were present in ```nums``` initially. The remaining elements of ```nums``` are not important as well as the size of ```nums```.
-
-- Return ```k```
+You can return the answer in any order.
 
 ## Contrains
 
-- ```1 <= nums.length <= 3 * 104```
-- ```-100 <= nums[i] <= 100```
-- ```nums``` is sorted in non-decreasing order.
+- ```2 <= nums.length <= 10^4```
+- ```-10^9 <= nums[i] <= 10^9```
+- ```-10^9 <= target <= 10^9```
 
 ### Example 1
 
 ```markdown
 
-INPUT: nums = [1,1,2]
+INPUT: nums = [2,7,11,15], target = 9
 
-OUTPUT: 2, nums = [1,2,_]
+OUTPUT: [0, 1]
 
 EXPLANATION:
-Your function should return k = 2, with the first two elements of nums being 1 and 2 respectively.
-It does not matter what you leave beyond the returned k (hence they are underscores).
+Because nums[0] + nums[1] == 9, we return [0, 1]
 ```
 
 ### Example 2
 
 ```markdown
 
-INPUT: nums = [0,0,1,1,1,2,2,3,3,4]
+INPUT: nums = [3,2,4], target = 6
 
-OUTPUT: 5, nums = [0,1,2,3,4,_,_,_,_,_]
+OUTPUT: [1,2]
+```
 
-EXPLANATION:
-Your function should return k = 5, with the first five elements of nums being 0, 1, 2, 3, and 4 respectively.
-It does not matter what you leave beyond the returned k (hence they are underscores).
+### Example 3
+
+```markdown
+
+INPUT: nums = [3,3], target = 6
+
+OUTPUT: [0,1]
 ```

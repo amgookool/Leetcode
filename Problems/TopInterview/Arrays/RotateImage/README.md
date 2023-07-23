@@ -1,45 +1,35 @@
-# Remove Duplicates from Sorted Array
+# Rotate Image
 
 ## Question
 
-Given an integer array ```nums``` sorted in **non-decreasing order**, remove the duplicates **_in-place_** such that each unique element appears only **once**.
-The **relative order** of the elements should be kept the **same**.
-Then return _the number of unique elements in_ ```nums```.
+You are given an ```n x n``` 2D ```matrix``` representing an image, rotate the image by **90** degrees (clockwise).
 
-Consider the number of unique elements of ```nums``` to be ```k```, to get accepted, you need to do the following things:
-
-- Change the array ```nums``` such that the first ```k``` elements of ```nums``` contain the unique elements in the order they were present in ```nums``` initially. The remaining elements of ```nums``` are not important as well as the size of ```nums```.
-
-- Return ```k```
+You have to rotate the image **_in-place_**, which means you have to modify the input 2D matrix directly. **DO NOT** allocate another 2D matrix and do the rotation.
 
 ## Contrains
 
-- ```1 <= nums.length <= 3 * 104```
-- ```-100 <= nums[i] <= 100```
-- ```nums``` is sorted in non-decreasing order.
+- ```n == matrix.length == matrix[i].length```
+- ```1 <= n <= 20```
+- ```-1000 <= matrix[i][j] <= 1000```
 
 ### Example 1
 
+![Example 1](https://assets.leetcode.com/uploads/2020/08/28/mat1.jpg)
+
 ```markdown
 
-INPUT: nums = [1,1,2]
+INPUT: matrix = [[1,2,3],[4,5,6],[7,8,9]]
 
-OUTPUT: 2, nums = [1,2,_]
-
-EXPLANATION:
-Your function should return k = 2, with the first two elements of nums being 1 and 2 respectively.
-It does not matter what you leave beyond the returned k (hence they are underscores).
+OUTPUT: [[7,4,1],[8,5,2],[9,6,3]]
 ```
 
 ### Example 2
 
+![Example 2](https://assets.leetcode.com/uploads/2020/08/28/mat2.jpg)
+
 ```markdown
 
-INPUT: nums = [0,0,1,1,1,2,2,3,3,4]
+INPUT: matrix = [[5,1,9,11],[2,4,8,10],[13,3,6,7],[15,14,12,16]]
 
-OUTPUT: 5, nums = [0,1,2,3,4,_,_,_,_,_]
-
-EXPLANATION:
-Your function should return k = 5, with the first five elements of nums being 0, 1, 2, 3, and 4 respectively.
-It does not matter what you leave beyond the returned k (hence they are underscores).
+OUTPUT: [[15,13,2,5],[14,3,4,1],[12,6,8,9],[16,7,10,11]
 ```

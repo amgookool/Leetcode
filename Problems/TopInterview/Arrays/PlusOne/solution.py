@@ -1,15 +1,12 @@
 from typing import List
 
-def removeDuplicates(nums: List[int]) -> int:
-    for val in nums:
-        while nums.count(val) > 1:
-            nums.remove(val)
-    return len(nums)
+def plusOne(self, digits: List[int]) -> List[int]:
+    pass
 
 
 if __name__ == '__main__':
-    # nums = [1,1,2]
-    nums = [0,0,1,1,1,2,2,3,3,4]
-    size = removeDuplicates(nums)
-    print(size)
-    print(nums)
+    test_cases = {
+        1: ([1,2,3], [1,2,4]),
+        2: ([4,3,2,1], [4,3,2,2]),
+        3: ([9], [1,0]),
+    }

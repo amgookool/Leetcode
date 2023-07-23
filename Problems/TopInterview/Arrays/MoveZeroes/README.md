@@ -1,45 +1,30 @@
-# Remove Duplicates from Sorted Array
+# Move Zeroes
 
 ## Question
 
-Given an integer array ```nums``` sorted in **non-decreasing order**, remove the duplicates **_in-place_** such that each unique element appears only **once**.
-The **relative order** of the elements should be kept the **same**.
-Then return _the number of unique elements in_ ```nums```.
+Given an integer array ```nums```, move all ```0```'s to the end of it while maintaining the relative order of the non-zero elements.
 
-Consider the number of unique elements of ```nums``` to be ```k```, to get accepted, you need to do the following things:
-
-- Change the array ```nums``` such that the first ```k``` elements of ```nums``` contain the unique elements in the order they were present in ```nums``` initially. The remaining elements of ```nums``` are not important as well as the size of ```nums```.
-
-- Return ```k```
+**Note** that you must do this in-place without making a copy of the array.
 
 ## Contrains
 
-- ```1 <= nums.length <= 3 * 104```
-- ```-100 <= nums[i] <= 100```
-- ```nums``` is sorted in non-decreasing order.
+- ```1 <= nums.length <= 10^4```
+- ```-2^31 <= nums[i] <= 2^31 - 1```
 
 ### Example 1
 
 ```markdown
 
-INPUT: nums = [1,1,2]
+INPUT: nums = [0,1,0,3,12]
 
-OUTPUT: 2, nums = [1,2,_]
-
-EXPLANATION:
-Your function should return k = 2, with the first two elements of nums being 1 and 2 respectively.
-It does not matter what you leave beyond the returned k (hence they are underscores).
+OUTPUT: [1,3,12,0,0]
 ```
 
 ### Example 2
 
 ```markdown
 
-INPUT: nums = [0,0,1,1,1,2,2,3,3,4]
+INPUT: nums = [0]
 
-OUTPUT: 5, nums = [0,1,2,3,4,_,_,_,_,_]
-
-EXPLANATION:
-Your function should return k = 5, with the first five elements of nums being 0, 1, 2, 3, and 4 respectively.
-It does not matter what you leave beyond the returned k (hence they are underscores).
+OUTPUT: [0]
 ```

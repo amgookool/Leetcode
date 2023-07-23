@@ -1,22 +1,20 @@
-# Remove Duplicates from Sorted Array
+# Plus One
 
 ## Question
 
-Given an integer array ```nums``` sorted in **non-decreasing order**, remove the duplicates **_in-place_** such that each unique element appears only **once**.
-The **relative order** of the elements should be kept the **same**.
-Then return _the number of unique elements in_ ```nums```.
+You are given a **large integer** represented as an integer array ```digits```, where each ```digits[i]``` is the ```ith``` digit of the integer.
 
-Consider the number of unique elements of ```nums``` to be ```k```, to get accepted, you need to do the following things:
+The digits are ordered from most significant to least significant in left-to-right order.
 
-- Change the array ```nums``` such that the first ```k``` elements of ```nums``` contain the unique elements in the order they were present in ```nums``` initially. The remaining elements of ```nums``` are not important as well as the size of ```nums```.
+The large integer does not contain any leading 0's.
 
-- Return ```k```
+Increment the large integer by **one** and _return the resulting array of digits_.
 
 ## Contrains
 
-- ```1 <= nums.length <= 3 * 104```
-- ```-100 <= nums[i] <= 100```
-- ```nums``` is sorted in non-decreasing order.
+- ```1 <= digits.length <= 100```
+- ```0 <= digits[i] <= 9```
+- digits does not contain any leading 0's.
 
 ### Example 1
 

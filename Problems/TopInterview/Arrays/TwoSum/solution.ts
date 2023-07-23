@@ -1,17 +1,15 @@
-function removeDuplicates(nums: number[]): number {
-  let k = nums.length;
-  for (let i = 0; i < k; i++) {
-    if (nums[i] === nums[i + 1]) {
-      nums.splice(i, 1);
-      i--;
-      k--;
-    }
-  }
-  return k;
+function twoSum(nums: number[], target: number): number[] {
+  return [1];
+
 };
 
-let nums = [0,0,1,1,1,2,2,3,3,4];
+interface TestCase {
+  input: number[];
+  target: number;
+}
 
-let size = removeDuplicates(nums);
-console.log(size);
-console.log(nums);
+const testCases: { [key: number]: TestCase } = {
+  1: { input: [2, 7, 11, 15], target: 9 },
+  2: { input: [3, 2, 4], target: 6 },
+  3: { input: [3, 3], target: 6 },
+};

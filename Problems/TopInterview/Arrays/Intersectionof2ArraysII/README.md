@@ -1,45 +1,33 @@
-# Remove Duplicates from Sorted Array
+# Intersection of Two Arrays II
 
 ## Question
 
-Given an integer array ```nums``` sorted in **non-decreasing order**, remove the duplicates **_in-place_** such that each unique element appears only **once**.
-The **relative order** of the elements should be kept the **same**.
-Then return _the number of unique elements in_ ```nums```.
+Given two integer arrays ```nums1``` and ```nums2```, return _an array of their intersection_.
 
-Consider the number of unique elements of ```nums``` to be ```k```, to get accepted, you need to do the following things:
-
-- Change the array ```nums``` such that the first ```k``` elements of ```nums``` contain the unique elements in the order they were present in ```nums``` initially. The remaining elements of ```nums``` are not important as well as the size of ```nums```.
-
-- Return ```k```
+Each element in the result must appear as many times as it shows in both arrays and you may return the result in **any order**.
 
 ## Contrains
 
-- ```1 <= nums.length <= 3 * 104```
-- ```-100 <= nums[i] <= 100```
-- ```nums``` is sorted in non-decreasing order.
+- ```1 <= nums1.length, nums2.length <= 1000```
+- ```0 <= nums1[i], nums2[i] <= 1000```
 
 ### Example 1
 
 ```markdown
 
-INPUT: nums = [1,1,2]
+INPUT: nums1 = [1,2,2,1], nums2 = [2,2]
 
-OUTPUT: 2, nums = [1,2,_]
-
-EXPLANATION:
-Your function should return k = 2, with the first two elements of nums being 1 and 2 respectively.
-It does not matter what you leave beyond the returned k (hence they are underscores).
+OUTPUT: [2,2]
 ```
 
 ### Example 2
 
 ```markdown
 
-INPUT: nums = [0,0,1,1,1,2,2,3,3,4]
+INPUT: nums1 = [4,9,5], nums2 = [9,4,9,8,4]
 
-OUTPUT: 5, nums = [0,1,2,3,4,_,_,_,_,_]
+OUTPUT: [4,9]
 
 EXPLANATION:
-Your function should return k = 5, with the first five elements of nums being 0, 1, 2, 3, and 4 respectively.
-It does not matter what you leave beyond the returned k (hence they are underscores).
+[9,4] is also accepted.
 ```

@@ -1,17 +1,16 @@
-function removeDuplicates(nums: number[]): number {
-  let k = nums.length;
-  for (let i = 0; i < k; i++) {
-    if (nums[i] === nums[i + 1]) {
-      nums.splice(i, 1);
-      i--;
-      k--;
-    }
-  }
-  return k;
+/**
+ Do not return anything, modify nums in-place instead.
+ */
+ function moveZeroes(nums: number[]): void {
+
+ };
+
+interface TestCase {
+  input: number[];
+  expected: number[];
+}
+
+const testCases: {[key:number] : TestCase} = {
+  1: { input: [0, 1, 0, 3, 12], expected: [1, 3, 12, 0, 0] },
+  2: { input: [0], expected: [0] },
 };
-
-let nums = [0,0,1,1,1,2,2,3,3,4];
-
-let size = removeDuplicates(nums);
-console.log(size);
-console.log(nums);

@@ -1,45 +1,65 @@
-# Remove Duplicates from Sorted Array
+# Valid Sodoku
 
 ## Question
 
-Given an integer array ```nums``` sorted in **non-decreasing order**, remove the duplicates **_in-place_** such that each unique element appears only **once**.
-The **relative order** of the elements should be kept the **same**.
-Then return _the number of unique elements in_ ```nums```.
+Determine if a```9 x 9``` Sudoku board is valid. Only the filled cells need to be validated according to the following rules:
 
-Consider the number of unique elements of ```nums``` to be ```k```, to get accepted, you need to do the following things:
+1. Each **row** must contain the digits ```1-9``` without repetition.
+2. Each **column** must contain the digits ```1-9``` without repetition.
+3. Each of the nine ```3 x 3``` sub-boxes of the grid must contain the digits ```1 - 9``` without repetition.
 
-- Change the array ```nums``` such that the first ```k``` elements of ```nums``` contain the unique elements in the order they were present in ```nums``` initially. The remaining elements of ```nums``` are not important as well as the size of ```nums```.
+**Note**:
 
-- Return ```k```
+- A Sodoku board (partially filled) could be valid but not necessarily solvable
+- Only the filled cells need to be validated according to the mentioned rules.
 
 ## Contrains
 
-- ```1 <= nums.length <= 3 * 104```
-- ```-100 <= nums[i] <= 100```
-- ```nums``` is sorted in non-decreasing order.
+- ```board.length == 9```
+- ```board[i].length == 9```
+- ```board[i][j]``` is a digit ```1 - 9``` or ```'.'```.
 
 ### Example 1
 
+![Sodoku Board](https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Sudoku-by-L2G-20050714.svg/250px-Sudoku-by-L2G-20050714.svg.png)
+
 ```markdown
 
-INPUT: nums = [1,1,2]
+INPUT: board = 
+[
+    ["5","3",".",".","7",".",".",".","."],
+    ["6",".",".","1","9","5",".",".","."],
+    [".","9","8",".",".",".",".","6","."],
+    ["8",".",".",".","6",".",".",".","3"],
+    ["4",".",".","8",".","3",".",".","1"],
+    ["7",".",".",".","2",".",".",".","6"],
+    [".","6",".",".",".",".","2","8","."],
+    [".",".",".","4","1","9",".",".","5"],
+    [".",".",".",".","8",".",".","7","9"]
+]
 
-OUTPUT: 2, nums = [1,2,_]
-
-EXPLANATION:
-Your function should return k = 2, with the first two elements of nums being 1 and 2 respectively.
-It does not matter what you leave beyond the returned k (hence they are underscores).
+OUTPUT: true
 ```
 
 ### Example 2
 
 ```markdown
 
-INPUT: nums = [0,0,1,1,1,2,2,3,3,4]
+INPUT: board = 
+[
+    ["5","3",".",".","7",".",".",".","."],
+    ["6",".",".","1","9","5",".",".","."],
+    [".","9","8",".",".",".",".","6","."],
+    ["8",".",".",".","6",".",".",".","3"],
+    ["4",".",".","8",".","3",".",".","1"],
+    ["7",".",".",".","2",".",".",".","6"],
+    [".","6",".",".",".",".","2","8","."],
+    [".",".",".","4","1","9",".",".","5"],
+    [".",".",".",".","8",".",".","7","9"],
+]
 
-OUTPUT: 5, nums = [0,1,2,3,4,_,_,_,_,_]
+OUTPUT: false
 
 EXPLANATION:
-Your function should return k = 5, with the first five elements of nums being 0, 1, 2, 3, and 4 respectively.
-It does not matter what you leave beyond the returned k (hence they are underscores).
+Same as Example 1, except with the 5 in the top left corner being modified to 8. Since there are two 8's in the top left 3x3 sub-box, it is invalid.
 ```

@@ -1,17 +1,14 @@
-function removeDuplicates(nums: number[]): number {
-  let k = nums.length;
-  for (let i = 0; i < k; i++) {
-    if (nums[i] === nums[i + 1]) {
-      nums.splice(i, 1);
-      i--;
-      k--;
-    }
-  }
-  return k;
+function plusOne(digits: number[]): number[] {
+  return [1];
+
 };
 
-let nums = [0,0,1,1,1,2,2,3,3,4];
-
-let size = removeDuplicates(nums);
-console.log(size);
-console.log(nums);
+interface TestCase {
+  input: number[];
+  expected: number[];
+}
+const test_cases: { [key: number]: TestCase } = {
+  1: { input: [1, 2, 3], expected: [1, 2, 4] },
+  2: { input: [4, 3, 2, 1], expected: [4, 3, 2, 2] },
+  3: { input: [9], expected: [1,0] },
+};
